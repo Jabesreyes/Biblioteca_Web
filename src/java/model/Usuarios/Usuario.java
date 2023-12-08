@@ -1,6 +1,7 @@
 
 package model.Usuarios;
 
+
 public class Usuario {
     int id;
     String usuario;
@@ -12,11 +13,11 @@ public class Usuario {
     int doc_prestados;
     int limite;
     int mora;
-
+    
     public Usuario(){
         
     }
-    
+
     public Usuario(int id, String usuario, String password, String nombre, String correo, String last_session, int id_tipo, int doc_prestados, int limite, int mora) {
         this.id = id;
         this.usuario = usuario;
@@ -110,5 +111,5 @@ public class Usuario {
         this.mora = mora;
     }
     
-    
+        
 }

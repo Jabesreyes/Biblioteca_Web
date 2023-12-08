@@ -12,7 +12,7 @@
         <h3 class="text-center mt-5">Biblioteca Amigos de Don Bosco</h3>
 
         <div class="container mt-5 col-lg-4">
-            <div class="card">
+            <div class="card col-sm-10">
                 <div class="card-body">
                     <form class="form-sign" action="Validar" method="POST">
                         <div class="form-group text-center">
@@ -31,7 +31,7 @@
                             <input type="submit" name="accion" value="Ingresar" class="btn btn-dark mt-4">
                         </div>
                     </form>
-                </div>
+                </div> 
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
