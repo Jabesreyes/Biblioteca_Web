@@ -10,7 +10,7 @@
     </head>
     <body>
         <h1>Libros</h1>
-        <a href="">Nuevo Libro</a>
+        <a href="LibrosController?accion=nuevo">Nuevo Libro</a>
         <br /><br />
         <table border="1" width="80%">
             <thead>
@@ -45,6 +45,9 @@
                         <td><c:out value="${libro.unidades}" /></td>
                         <td><c:out value="${libro.unidadesprestados}" /></td>
                         <td><c:out value="${libro.unidadesdisponibles}" /></td>
+                        <td><c:out value="${libro.codigoidentificacion}" /></td>
+                        <td><c:out value="${libro.codigoidentificacion}" /></td>
+
 
 
 

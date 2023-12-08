@@ -1,15 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package model;
+package model.Usuarios;
 
-/**
- *
- * @author Jabes
- */
-public class Usuarios {
+
+public class usuarios {
  
     private int id;
     private String usuario;
@@ -19,7 +11,7 @@ public class Usuarios {
     private String last_session;
     private int id_tipo;
     private String nombre_tipo;
-
+    
     public int getId() {
         return id;
     }
@@ -75,7 +67,7 @@ public class Usuarios {
     public void setId_tipo(int id_tipo) {
         this.id_tipo = id_tipo;
     }
-
+    
     public String getNombre_tipo() {
         return nombre_tipo;
     }
@@ -83,4 +75,9 @@ public class Usuarios {
     public void setNombre_tipo(String nombre_tipo) {
         this.nombre_tipo = nombre_tipo;
     }
+
+    
+    
+
+    
 }

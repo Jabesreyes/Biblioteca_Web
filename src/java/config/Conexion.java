@@ -24,9 +24,7 @@ public class Conexion {
             
             System.out.println("Se realizo la conexion");
             
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
+        } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
         }
         
