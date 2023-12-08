@@ -17,6 +17,7 @@ public class Conexion {
     private final String password = "";
     private final String url = "jdbc:mysql://localhost:3306/"+ base;
     private Connection con = null;
+    
     public Connection getConexion(){
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");

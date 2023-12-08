@@ -14,7 +14,7 @@
         <div class="container mt-5 col-lg-4">
             <div class="card">
                 <div class="card-body">
-                    <form class="form-sign" action="Validar" method="POST">
+                    <form>
                         <div class="form-group text-center">
                             <h3>Login</h3>
                             <label>Bienvenidos al sistema</label>
