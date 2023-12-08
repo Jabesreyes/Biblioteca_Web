@@ -14,21 +14,21 @@
         <div class="container mt-5 col-lg-4">
             <div class="card">
                 <div class="card-body">
-                    <form>
+                    <form class="form-sign" action="Validar" method="POST">
                         <div class="form-group text-center">
                             <h3>Login</h3>
                             <label>Bienvenidos al sistema</label>
                         </div>
                         <div class="form-group pt-3">
                             <label>Usuario:</label>
-                            <input type="text" name="txtuser" class="form-control">
+                            <input type="text" name="txtuser" class="form-control" required>
                         </div>
                         <div class="form-group pt-3">
                             <label>Contraseña:</label>
-                            <input type="password" name="txtpass" class="form-control">
+                            <input type="password" name="txtpass" class="form-control" required>
                         </div>
                         <div class="text-center"> 
-                            <input type="submit" name="accion" value="Ingresar" class="btn btn-dark btn-block mt-4">
+                            <input type="submit" name="accion" value="Ingresar" class="btn btn-dark mt-4">
                         </div>
                     </form>
                 </div>

@@ -16,15 +16,14 @@ public class Controlador extends HttpServlet {
    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        String accion = request.getParameter("accion");
-        switch (accion) {
-            case "Principal":
-                request.getRequestDispatcher("Principal.jsp").forward(request, response);
-                break;
-            default:
-                throw new AssertionError();
-        }
+            String accion = request.getParameter("accion");
+            switch (accion){
+                case "Principal":
+                    request.getRequestDispatcher("Principal/Principal.jsp").forward(request, response);
+                    break;
+                default:
+                    throw new AssertionError();
+            }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

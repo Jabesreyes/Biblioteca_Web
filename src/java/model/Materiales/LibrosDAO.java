@@ -24,7 +24,7 @@ public class LibrosDAO {
 
     public LibrosDAO() {
         Conexion con = new Conexion();
-        conexion = con.getConexion();
+        conexion = con.Conexion();
     }
 
     public List<Libros> listarLibros() {
