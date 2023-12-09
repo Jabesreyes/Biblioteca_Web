@@ -10,19 +10,18 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h1 class="mb-4">Libros</h1>
-        <a href="LibrosController?accion=nuevo" class="btn btn-primary mb-3">Nuevo Libro</a>
+        <h1 class="mb-4">CDs</h1>
+        <a href="CdsController?accion=nuevo" class="btn btn-primary mb-3">Nuevo CD</a>
         
         <table class="table">
             <thead>
                 <tr>
                     <th>Codigo Identificacion</th>
                     <th>Titulo</th>
-                    <th>Autor</th>
-                    <th>Paginas</th>
-                    <th>Editorial</th>
-                    <th>ISBN</th>
-                    <th>Fecha Publicacion</th>
+                    <th>Artista</th>
+                    <th>Genero</th>
+                    <th>Duracion</th>
+                    <th>Numero Canciones</th>
                     <th>Ubicacion</th>
                     <th>Unidades</th>
                     <th>Unidades Prestados</th>
@@ -32,19 +31,18 @@
                 </tr>
             </thead>
             <tbody>
-                <c:forEach var="libro" items="${lista}">
+                <c:forEach var="cds" items="${lista}">
                     <tr>
-                        <td>${libro.codigoidentificacion}</td>
-                        <td>${libro.titulo}</td>
-                        <td>${libro.autor}</td>
-                        <td>${libro.paginas}</td>
-                        <td>${libro.editorial}</td>
-                        <td>${libro.isbn}</td>
-                        <td>${libro.fechapublicacion}</td>
-                        <td>${libro.ubicacion}</td>
-                        <td>${libro.unidades}</td>
-                        <td>${libro.unidadesprestados}</td>
-                        <td>${libro.unidadesdisponibles}</td>
+                        <td>${cds.codigoidentificacion}</td>
+                        <td>${cds.titulo}</td>
+                        <td>${cds.artista}</td>
+                        <td>${cds.genero}</td>
+                        <td>${cds.duracion}</td>
+                        <td>${cds.numerocanciones}</td>
+                        <td>${cds.ubicacion}</td>
+                        <td>${cds.unidades}</td>
+                        <td>${cds.unidadesprestados}</td>
+                        <td>${cds.unidadesdisponibles}</td>
                         <td>
                             <a href="#" class="btn btn-info btn-sm">Editar</a>
                         </td>
