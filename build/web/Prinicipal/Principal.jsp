@@ -1,3 +1,4 @@
+<%@page import="model.Usuarios.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -15,25 +16,30 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
                     <div class="navbar-nav">
                         <a class="nav-link active" aria-current="page" href="Controlador?accion=Inicio" target="myFrame">Inicio</a>
                         <a class="nav-link" href="Controlador?accion=Catalogo" target="myFrame">Catalogo</a>
-                        <a class="nav-link" href="Controlador?accion=Configuraciones" target="myFrame">Configuraciones</a>
                         <a class="nav-link" href="Controlador?accion=Devoluciones" target="myFrame">Devoluciones</a>
-                        <a class="nav-link" href="Controlador?accion=Mora" target="myFrame">Mora</a>
                         <a class="nav-link" href="Controlador?accion=Prestamos" target="myFrame">Prestamos</a>
+
+                        <% if (((Usuario) session.getAttribute("usuarioLogueado")).getId_tipo() != 2 && ((Usuario) session.getAttribute("usuarioLogueado")).getId_tipo() != 3) { %>
                         <a class="nav-link" href="Controlador?accion=Reestablecer" target="myFrame">Reestablecer Contraseña</a>
                         <a class="nav-link" href="Controlador?accion=Registrar" target="myFrame">Registrar</a>
+                        <a class="nav-link" href="Controlador?accion=Mora" target="myFrame">Mora</a>
+                        <a class="nav-link" href="Controlador?accion=Configuraciones" target="myFrame">Configuraciones</a>
+
+                        <% }%>
 
                     </div>
                 </div>
                 <div class="dropdown mr-5">
                     <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        ${usuario.getNombre()}
+                        ${usuarioLogueado.getNombre()}
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end text-center">
-                        <li><a class="dropdown-item" href="#">${usuario.getUsuario()}</a></li>
-                        <li><a class="dropdown-item" href="#">${usuario.getCorreo()}</a></li>
+                        <li><a class="dropdown-item" href="#">${usuarioLogueado.getUsuario()}</a></li>
+                        <li><a class="dropdown-item" href="#">${usuarioLogueado.getCorreo()}</a></li>
                         <div class="dropdown-divider"></div>
                         <form action="Validar" method="POST">
                             <button name="accion" value="Salir" class="dropdown-item" href="#">Salir</button>
@@ -43,8 +49,8 @@
             </div>
         </nav>
 
-                        
-                        
+
+
 
         <div class="m-4" style="height: 550px;">
             <iframe name="myFrame" style="height: 100%; width: 100%"></iframe>

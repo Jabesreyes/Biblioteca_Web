@@ -54,7 +54,8 @@ public class RevistasController extends HttpServlet {
             List<Revistas> listaRevistas = revistasDAO.listarRevistas();
             request.setAttribute("lista", listaRevistas); 
         }
-
+        
+        
         dispatcher.forward(request, response);
     }
 

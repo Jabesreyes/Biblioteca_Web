@@ -1,3 +1,4 @@
+<%@page import="model.Usuarios.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
@@ -11,7 +12,10 @@
     <body>
         <div class="container mt-5">
             <h1 class="mb-4">Obras</h1>
+            <% if (((Usuario) session.getAttribute("usuarioLogueado")).getId_tipo() == 1 || ((Usuario) session.getAttribute("usuarioLogueado")).getId_tipo() == 2) { %>
             <a href="ObrasController?accion=nuevo" class="btn btn-primary mb-3">Nueva Obra</a>
+
+            <% }%>
 
             <table class="table">
                 <thead>
@@ -26,8 +30,7 @@
                         <th>Unidades</th>
                         <th>Unidades Prestados</th>
                         <th>Unidades Disponibles</th>
-                        <th></th>
-                        <th></th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -43,12 +46,7 @@
                             <td>${obras.unidades}</td>
                             <td>${obras.unidadesprestados}</td>
                             <td>${obras.unidadesdisponibles}</td>
-                            <td>
-                                <a href="#" class="btn btn-info btn-sm">Editar</a>
-                            </td>
-                            <td>
-                                <a href="#" class="btn btn-danger btn-sm">Eliminar</a>
-                            </td>
+
                         </tr>
                     </c:forEach>
                 </tbody>
